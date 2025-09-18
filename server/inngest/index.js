@@ -11,8 +11,8 @@ const syncUserCreation = inngest.createFunction(
       event.data;
     const userData = {
       _id: id,
-      email: email_addresses[0].email_addresses,
       name: first_name + " " + last_name,
+      email: email_addresses[0].email_addresses,
       image: image_url,
     };
     await User.create(userData);
@@ -37,8 +37,8 @@ const syncUserUpdation = inngest.createFunction(
       event.data;
     const userData = {
       _id: id,
-      email: email_addresses[0].email_addresses,
       name: first_name + " " + last_name,
+      email: email_addresses[0].email_addresses,
       image: image_url,
     };
     await User.findByIdAndUpdate(id, userData);
